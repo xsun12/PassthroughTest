@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<script src="./js/common.js"></script>
+<script>
+var worker = new Worker('./js/test_fs_sync.js');
+
+var count=0;
+worker.onmessage = function(e) {
+    var result = document.getElementById("result");
+    result.innerHTML += (e.data + "</br>");
+};
+
+worker.onerror = function(e) {
+};
+
+worker.postMessage("start");
+</script>
+
+</head>
+<body>
+<div id="result"></div>
+</body>
+</html>

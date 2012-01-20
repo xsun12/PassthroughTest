@@ -1,0 +1,12 @@
+{
+    "version": "0.0.1",
+        "name": "FileSystem pass-through testing",
+        "permissions": ["filePassThrough"],
+        "description": "Used to go through and test the FileSystem pass-through feature",
+        "file_name": "manifest.json",
+        "app": {
+            "launch": {
+                "local_path": "index.html"
+            }
+        }
+}
